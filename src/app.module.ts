@@ -5,9 +5,10 @@ import { ConfigModule } from '@nestjs/config';
 import * as Joi from 'joi';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { typeOrmAsyncConfig } from './core/database/typeorm/typeOrmModuleOption';
-
+import { UserModule } from './user/user.module';
 @Module({
   imports: [
+    UserModule,
     TypeOrmModule.forRootAsync(typeOrmAsyncConfig),
     ConfigModule.forRoot({
       isGlobal: true,
