@@ -1,12 +1,13 @@
 import { ConfigService } from '@nestjs/config';
 import { DataSourceOptions } from 'typeorm';
+import { SnakeNamingStrategy } from 'typeorm-naming-strategies';
 
 export function getDataSourceOptions(
   configService: ConfigService,
 ): DataSourceOptions {
   return {
     name: 'default',
-    type: 'mysql',
+    type: 'postgres',
     host: configService.get('RDS_HOSTNAME'),
     port: configService.get('RDS_PORT'),
     database: configService.get('RDS_DB_NAME'),
@@ -17,5 +18,6 @@ export function getDataSourceOptions(
     synchronize: false,
     logging: ['error', 'schema'],
     migrationsRun: true,
+    namingStrategy: new SnakeNamingStrategy(),
   };
 }
