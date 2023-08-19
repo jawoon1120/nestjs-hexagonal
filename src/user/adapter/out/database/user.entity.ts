@@ -1,7 +1,8 @@
 import { Column, Entity } from 'typeorm';
+import { BaseEntity } from '../../../../common/adapter/persistence/base-entity';
 
 @Entity('user')
-export class UserEntity {
+export class UserEntity extends BaseEntity {
   @Column({ type: 'varchar', length: 64 })
   name: string;
 
