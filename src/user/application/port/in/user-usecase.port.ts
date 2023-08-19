@@ -3,6 +3,6 @@ import {
   UserCreateResDTO,
 } from 'src/user/adapter/in/web/dto/createUser.dto';
 
-export interface UserUserCase {
+export interface UserUserCaseInPort {
   signup(userCreateReqData: UserCreateReqDTO): Promise<UserCreateResDTO>;
 }
