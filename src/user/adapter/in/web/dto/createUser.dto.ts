@@ -12,6 +12,9 @@ export class UserCreateReqDTO {
 }
 
 export class UserCreateResDTO {
+  constructor(userId: number) {
+    this.userId = userId;
+  }
   @IsString()
-  userId: string;
+  userId: number;
 }
