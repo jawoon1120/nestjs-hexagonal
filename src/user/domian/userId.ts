@@ -1,6 +1,7 @@
-export class UserId {
-  key: string;
-  constructor(key: string) {
-    this.key = key;
+import { Identity } from '../../common/domain/Identity';
+
+export class UserId extends Identity {
+  constructor(key: number) {
+    super(key);
   }
 }
