@@ -19,7 +19,8 @@ export class User extends Aggregate<UserId> {
 
   static create(param: { name: string; email: string; password: string }) {
     const { name, email, password } = param;
-    return new User(null, name, email, password, new Date(), new Date(), null);
+    const newId = new UserId(null);
+    return new User(newId, name, email, password, new Date(), new Date(), null);
   }
   getName(): string {
     return this.name;
