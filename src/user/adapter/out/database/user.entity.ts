@@ -1,5 +1,6 @@
 import { BaseEntity } from 'src/core/database/typeorm/base.entity';
 import { Column, Entity } from 'typeorm';
+import { BaseEntity } from '../../../../common/adapter/persistence/base-entity';
 
 @Entity('user')
 export class UserEntity extends BaseEntity {

@@ -1,0 +1,26 @@
+{
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true,
+        "source.organizeImports": true
+    },
+    "editor.formatOnSave": true,
+    "eslint.format.enable": true,
+    "editor.suggest.showMethods": true,
+    "editor.suggest.preview": true,
+    "eslint.workingDirectories": [
+        {
+            "mode": "auto"
+        }
+    ],
+    "[markdown]": {
+        "editor.formatOnSave": false
+    },
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "typescript.preferences.importModuleSpecifier": "relative",
+    "[typescript]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": false
+        }
+    }
+}
