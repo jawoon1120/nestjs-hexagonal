@@ -15,9 +15,9 @@ export function getDataSourceOptions(
     password: configService.get('RDS_PASSWORD'),
     entities: [__dirname + '/../../../**/*.entity.{js,ts}'],
     migrations: [__dirname + '/../../../migrations/*{.ts,.js}'],
-    synchronize: false,
+    synchronize: true,
     logging: ['error', 'schema'],
-    migrationsRun: true,
+    migrationsRun: false,
     namingStrategy: new SnakeNamingStrategy(),
   };
 }
